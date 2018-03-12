@@ -1,0 +1,9 @@
+{
+  "name": "codemirror-liquid",
+  "version": "1.0.0",
+  "description": "Liquid CodeMirror mode",
+  "main": "src/index.js",
+  "author": "Tom de Grunt",
+  "license": "MIT",
+  "private": true
+}
