@@ -1,3 +1,10 @@
+/*
+ * codemirror-liquid is licensed under MIT license.
+ * Sourcecode: https://gitlab.com/entropydecelerator/codemirror-liquid
+ *
+ * Copyright (C) 2018 Tom de Grunt <tom@degrunt.nl>
+ */
+
 import CodeMirror from "codemirror";
 
 var Pos = CodeMirror.Pos, cmpPos = CodeMirror.cmpPos;
@@ -148,7 +155,6 @@ CodeMirror.defineMode("liquid", function(config, parserConfig) {
 CodeMirror.registerHelper("hint", "liquid-tags", function(editor, options) {
   var keywords = set("if else elsif endif for continue break endfor unless endunless case when endcase assign");
   var filters = set("abs append at_least at_most capitalize ceil compact concat date default divided_by downcase escape escape_once first floor join last lstrip map minus modulo newline_to_br plus prepend remove remove_first replace replace_first reverse round rstrip size slice sort sort_natural split strip strip_html strip_newlines times truncate truncatewords uniq upcase url_decode url_encode");
-  var identifierQuote = "'";
 
   var cur = editor.getCursor();
   var result = [];
