@@ -50,7 +50,7 @@ function addMatches(result, search, wordlist, formatter) {
     for (var word in wordlist) if (wordlist.hasOwnProperty(word)) {
       var val = wordlist[word]
       if (!val || val === true)
-        val = word
+        val = word;
       else
         val = val.displayText ? {text: val.text, displayText: val.displayText} : val.text
       if (match(search, val)) result.push(formatter(val))
@@ -59,7 +59,7 @@ function addMatches(result, search, wordlist, formatter) {
 }
 
 function buildCompletion(start, attrs) {
-  var result = attrs.map(function(a) {
+  var result = (attrs||[]).map(function(a) {
     return {text: [start, a].join('.'), displayText: a};
   });
   return result;
