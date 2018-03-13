@@ -85,7 +85,7 @@ var table = {
 function nameCompletion(cur, token, result, editor) {
   var start = token.start;
 
-  var parts = token.string.split('.').filter(function(t) { t.length > 0 });
+  var parts = token.string.split('.').filter(function(t) { return t.length > 0 });
   var key;
 
   for (var i = 0; i < parts.length; i++){
@@ -172,7 +172,6 @@ CodeMirror.registerHelper("hint", "liquid-tags", function(editor, options) {
     start = end = cur.ch;
     search = "";
   }
-  // console.log('search', search, token);
   if (token.string.match(/^[\.\w]*$/)) {
     start = nameCompletion(cur, token, result, editor);
   } else {
