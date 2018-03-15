@@ -65,6 +65,8 @@ function buildCompletion(start, attrs) {
   return result;
 }
 
+// Liquid has Drop.invokable_methods
+// So we could do something like: ShipmentDrop.invokable_methods.to_a to get a list of current completions
 var locationAttr = "course altitude latitude longitude speed comments company_name contact email mobile establishment administrative_area administrative_area_code iso_country_code locality location_type postal_code sub_administrative_area sub_locality sub_thoroughfare thoroughfare handling pre_validated".split(' ');
 var userAttr = 'id first_name last_name mobile email profile_image_url bio name full_name'.split(' ');
 var companyAttr = 'name email channel allocation_enabled'.split(' ');
